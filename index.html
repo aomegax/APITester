@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html ng-app="apiTester" ng-controller="AppCtrl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="public/images/favicon.ico">
+
+    <title>API Tester</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="public/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="public/stylesheets/templace.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">API Tester</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-control-group form-control-group-lg">
+                <select class="form-control form-control-before" ng-options="http for http in httpList" ng-model="protocol"></select>
+                <input type="text" class="form-control form-control-after" placeholder="url" ng-model="url" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <label class="control-label">Method</label>
+            <select class="form-control" ng-options="a for a in methodList" ng-model="method"></select>
+        </div>
+
+        <div class="col-md-2">
+            <label class="control-label">Content Type</label>
+            <select class="form-control" ng-options="a for a in contentTypeList" ng-model="contentType"></select>
+        </div>
+
+        <div class="col-md-7">
+            <label class="control-label">Input Parameter</label>
+            <input type="text" class="form-control" placeholder="" ng-model="input" />
+        </div>
+
+        <div class="col-md-1">
+            <button type="button" class="call-btn btn btn-default" ng-click="call()">Call</button>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <label class="control-label">Success response</label>
+            <pre class="success">{{successResponse}}</pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label class="control-label">Error response</label>
+            <pre class="error">{{errorResponse}}</pre>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="public/javascripts/bootstrap.min.js"></script>
+<script src="public/javascripts/angular.min.js"></script>
+<script src="public/javascripts/app.js"></script>
+</body>
+</html>

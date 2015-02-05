@@ -1,0 +1,34 @@
+body {
+    padding-top: 70px;
+}
+
+select.form-control-before {
+    width: 10%;
+    float: left
+}
+
+input.form-control-after {
+    width: 90%;
+}
+
+.container .row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+pre {
+    height: 300px;
+}
+pre.success {
+    border: 1px solid #43ac6a;
+    background-color: #e1f3e8;
+}
+pre.error {
+    border: 1px solid #f04124;
+    background-color: #fde7e4;
+}
+
+.call-btn {
+    width: 100%;
+    margin-top: 24px;
+}
