@@ -24,6 +24,10 @@ app.controller("AppCtrl", ["$scope", "$http", function($scope, $http) {
     $scope.errorResponse = "";
 
     $scope.call = function() {
+
+        g$scope.successResponse = "";
+        $scope.errorResponse = "";
+
         if ($scope.url.trim().length > 0) {
             var request = {
                 method: $scope.method,
